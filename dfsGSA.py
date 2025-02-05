@@ -5,7 +5,7 @@ def dfsGSA(stateSpaceGraph, start, goal):
     explored_set = set()
 
     while frontier:
-        node = frontier.pop()
+        node = frontier.pop() # because it is DFS, it should use pop() here, pop the last element of frontier
         if node.endswith(goal): return node
         if node[-1] not in explored_set:
             explored_set.add(node[-1])
