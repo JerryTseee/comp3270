@@ -4,7 +4,7 @@ def bfsGSA(stateSpaceGraph, startstate, goalstate):
     frontier = collections.deque([startstate])
     explored = set()
     while frontier:
-        node = frontier.popleft()
+        node = frontier.popleft() # because it is BFS here, it should use popleft() to get the leftmost element here
         if node.endswith(goalstate):
             return node
         else:
